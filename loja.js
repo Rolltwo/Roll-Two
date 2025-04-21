@@ -25,14 +25,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Carrinho de compras
     const cartBtn = document.querySelector('.cart-btn');
     const cartCount = document.querySelector('.cart-count');
+    const cartOverlay = document.querySelector('.cart-overlay');
+    const cartClose = document.querySelector('.cart-close');
+    const cartItems = document.querySelector('.cart-items');
+    const cartTotalPrice = document.querySelector('.cart-total-price');
     const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
     
-    let cartItems = [];
+    let cart = [];
 
     // Função para atualizar o carrinho
     window.updateCart = function(item) {
-        cartItems.push(item);
+        cart.push(item);
         updateCartCount();
+        updateCartDisplay();
         
         // Animação do carrinho
         cartBtn.classList.add('pulse');
@@ -40,6 +45,65 @@ document.addEventListener('DOMContentLoaded', () => {
             cartBtn.classList.remove('pulse');
         }, 300);
     };
+
+    // Função para atualizar a exibição do carrinho
+    function updateCartDisplay() {
+        cartItems.innerHTML = '';
+        let total = 0;
+
+        if (cart.length === 0) {
+            cartItems.innerHTML = `
+                <div class="cart-empty">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Seu carrinho está vazio</p>
+                </div>
+            `;
+        } else {
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+
+                const itemElement = document.createElement('div');
+                itemElement.className = 'cart-item';
+                itemElement.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+                    <div class="cart-item-details">
+                        <span class="cart-item-name">${item.name}</span>
+                        <div class="cart-item-options">
+                            ${item.size ? `<span>Tamanho: ${item.size}</span><br>` : ''}
+                            ${item.color ? `<span>Cor: ${getColorName(item.color)}</span><br>` : ''}
+                            <span>Quantidade: ${item.quantity}</span>
+                        </div>
+                        <span class="cart-item-price">R$ ${itemTotal.toFixed(2)}</span>
+                    </div>
+                    <button class="cart-item-remove" data-index="${index}">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                `;
+                cartItems.appendChild(itemElement);
+            });
+        }
+
+        cartTotalPrice.textContent = `R$ ${total.toFixed(2)}`;
+
+        // Adicionar event listeners para os botões de remover
+        document.querySelectorAll('.cart-item-remove').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const index = parseInt(e.currentTarget.dataset.index);
+                cart.splice(index, 1);
+                updateCartCount();
+                updateCartDisplay();
+            });
+        });
+    }
+
+    function getColorName(color) {
+        const colors = {
+            '#000000': 'Preto',
+            '#FFFFFF': 'Branco'
+        };
+        return colors[color] || color;
+    }
 
     addToCartButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -66,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function updateCartCount() {
-        let totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+        let totalItems = cart.reduce((total, item) => total + item.quantity, 0);
         cartCount.textContent = totalItems;
     }
 
@@ -84,6 +148,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     `;
     document.head.appendChild(style);
+
+    // Event listeners para abrir/fechar o carrinho
+    cartBtn.addEventListener('click', () => {
+        cartOverlay.classList.add('active');
+        updateCartDisplay();
+    });
+
+    cartClose.addEventListener('click', () => {
+        cartOverlay.classList.remove('active');
+    });
+
+    // Fechar carrinho ao clicar fora
+    cartOverlay.addEventListener('click', (e) => {
+        if (e.target === cartOverlay) {
+            cartOverlay.classList.remove('active');
+        }
+    });
 
     // Abrir detalhes do produto ao clicar
     products.forEach(product => {

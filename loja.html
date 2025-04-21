@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja RollTwo</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="RollTwo-branca.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loja.css">
+    <link rel="stylesheet" href="produto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="RollTwo-branca.png" alt="RollTwo Logo" class="logo-dark">
+            <img src="RollTwo-preta.png" alt="RollTwo Logo" class="logo-light">
+        </div>
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#about">Sobre</a>
+            <a href="#news">Notícias</a>
+            <a href="#careers">Carreira</a>
+            <a href="loja.html" class="active">Loja</a>
+        </div>
+        <button id="theme-toggle" class="theme-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <main class="store-container">
+        <h1>Loja RollTwo</h1>
+        
+        <div class="store-categories">
+            <button class="category-btn active" data-category="todos">Todos</button>
+            <button class="category-btn" data-category="vestuario">Vestuário</button>
+            <button class="category-btn" data-category="acessorios">Acessórios</button>
+            <button class="category-btn" data-category="eletronicos">Eletrônicos</button>
+            <button class="category-btn" data-category="colecionaveis">Colecionáveis</button>
+        </div>
+
+        <div class="products-grid">
+            <!-- Vestuário -->
+            <div class="product-card" data-category="vestuario">
+                <div class="product-image">
+                    <img src="camisaRT-preta.png" alt="Camiseta RollTwo">
+                    <div class="product-overlay">
+                        <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Camiseta RollTwo Preta
+                        <br>
+                        <br>
+                        Modelo 1
+                    </h3>
+                    <p>Camiseta oficial com logo da RollTwo</p>
+                    <span class="price">R$ 79,90</span>
+                </div>
+            </div>
+
+            <!-- Vestuário -->
+            <div class="product-card" data-category="vestuario">
+                <div class="product-image">
+                    <img src="camisaRT-branca1.png" alt="Camiseta RollTwo">
+                    <div class="product-overlay">
+                        <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Camiseta RollTwo Branca 
+                        <br>
+                        <br>
+                        Modelo 1
+                    </h3>
+                    <p>Camiseta oficial com logo da RollTwo</p>
+                    <span class="price">R$ 79,90</span>
+                </div>
+            </div>
+
+            <!-- Vestuário Modelo 2 Preta -->
+            <div class="product-card" data-category="vestuario">
+                <div class="product-image">
+                    <img src="camisaRT-preta2.png" alt="Camiseta RollTwo">
+                    <div class="product-overlay">
+                        <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Camiseta RollTwo Preta
+                        <br>
+                        <br>
+                        Modelo 2
+                    </h3>
+                    <p>Camiseta oficial com logo da RollTwo</p>
+                    <span class="price">R$ 79,90</span>
+                </div>
+            </div>
+
+            <!-- Vestuário Modelo 2 Branca -->
+            <div class="product-card" data-category="vestuario">
+                <div class="product-image">
+                    <img src="camisaRT-branca2.png" alt="Camiseta RollTwo">
+                    <div class="product-overlay">
+                        <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Camiseta RollTwo Branca
+                        <br>
+                        <br>
+                        Modelo 2
+                    </h3>
+                    <p>Camiseta oficial com logo da RollTwo</p>
+                    <span class="price">R$ 79,90</span>
+                </div>
+            </div>
+
+            <!-- Acessórios -->
+            <div class="product-card" data-category="acessorios">
+                <div class="product-image">
+                    <img src="headset-gaming.png" alt="Headset Gamer">
+                    <div class="product-overlay">
+                        <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Headset Gamer Pro</h3>
+                    <p>Headset profissional com som surround 7.1</p>
+                    <span class="price">R$ 399,90</span>
+                </div>
+            </div>
+
+            <!-- Eletrônicos -->
+            <div class="product-card" data-category="eletronicos">
+                <div class="product-image">
+                    <img src="mouse-gamer.png" alt="Mouse Gamer">
+                    <div class="product-overlay">
+                        <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Mouse Gamer RGB</h3>
+                    <p>Mouse profissional com 12000 DPI</p>
+                    <span class="price">R$ 249,90</span>
+                </div>
+            </div>
+
+            <!-- Colecionáveis -->
+            <div class="product-card" data-category="colecionaveis">
+                <div class="product-image">
+                    <img src="action-figure.png" alt="Action Figure">
+                    <div class="product-overlay">
+                        <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Action Figure Paradise</h3>
+                    <p>Action Figure exclusiva do jogo Paradise</p>
+                    <span class="price">R$ 199,90</span>
+                </div>
+            </div>
+
+            <!-- Mais produtos... -->
+        </div>
+
+        <!-- Carrinho flutuante -->
+        <div class="cart-floating">
+            <button class="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </button>
+        </div>
+    </main>
+
+    <!-- Tela de detalhes do produto -->
+    <div class="product-details-overlay">
+        <div class="product-details-container">
+            <button class="product-details-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="product-details-images">
+                <img src="" alt="" class="product-details-main-image">
+                <div class="product-details-thumbnails">
+                    <!-- Thumbnails serão adicionados dinamicamente -->
+                </div>
+            </div>
+            <div class="product-details-info">
+                <h2 class="product-details-title"></h2>
+                <p class="product-details-price"></p>
+                <p class="product-details-description"></p>
+                
+                <div class="product-details-options">
+                    <!-- Opções de tamanho -->
+                    <div class="product-details-option" id="size-options">
+                        <h3 class="product-details-option-title">Tamanho</h3>
+                        <div class="product-details-option-buttons">
+                            <!-- Botões de tamanho serão adicionados dinamicamente -->
+                        </div>
+                    </div>
+
+                    <!-- Opções de cor -->
+                    <div class="product-details-option" id="color-options">
+                        <h3 class="product-details-option-title">Cor</h3>
+                        <div class="product-details-option-buttons">
+                            <!-- Botões de cor serão adicionados dinamicamente -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-details-quantity">
+                    <button class="quantity-btn minus">-</button>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="quantity-btn plus">+</button>
+                </div>
+
+                <button class="product-details-add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>Email: contact@rolltwo.com</p>
+                <p>Telefone: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h4>Siga-nos</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/rolltwobr/"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 RollTwo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="loja.js"></script>
+    <script src="produto.js"></script>
+</body>
+</html> 

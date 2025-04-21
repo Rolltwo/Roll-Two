@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RollTwo Games</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/images/RollTwo-branca.png">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/static/images/RollTwo-branca.png" alt="RollTwo Logo" class="logo-dark">
+            <img src="/static/images/RollTwo-preta.png" alt="RollTwo Logo" class="logo-light">
+        </div>
+        <div class="nav-links">
+            <div class="dropdown">
+                <a href="#games" class="dropdown-trigger">Jogos <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#epic-adventure">157 Role-Play</a>
+                    <a href="#racing-evolution">Paradise</a>
+                    <a href="#coming-soon">Em Breve</a>
+                </div>
+            </div>
+            <a href="#about">Sobre</a>
+            <a href="#news">Notícias</a>
+            <a href="#careers">Carreira</a>
+            <a href="#store">Loja</a>
+        </div>
+        <button id="theme-toggle" class="theme-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <header class="hero">
+        <button class="hero-nav prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="hero-nav next"><i class="fas fa-chevron-right"></i></button>
+        
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <div class="hero-content">
+                    <h1>Paradise</h1>
+                    <p>Venha criar a história de seu personagem no Paradise!</p>
+                    <a href="#" class="cta-button">Saber Mais</a>
+                </div>
+                <div class="hero-image" style="background-image: url('/static/images/paradise.png');"></div>
+            </div>
+
+            <div class="hero-slide">
+                <div class="hero-content">
+                    <h1>Bey Wery Remastered</h1>
+                    <p>A premiada franquia de jogos de estratégia retorna com um novo capítulo revolucionário.</p>
+                    <a href="#" class="cta-button">Saber Mais</a>
+                </div>
+                <div class="hero-image" style="background-image: url('/static/images/beywery2.png');"></div>
+            </div>
+        </div>
+
+        <div class="hero-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+        </div>
+    </header>
+
+
+    
+
+    <!-- Jogos em Destaque -->
+    <section id="featured-games" class="games-section">
+        <h2>Jogos em Destaque</h2>
+        <div class="game-grid">
+            <div class="game-card" id="epic-adventure">
+                <div class="game-image">
+                    <img src="/static/images/157.png" alt="Epic Adventure">
+                    <div class="game-overlay">
+                        <a href="#" class="play-button"><i class="fas fa-play"></i> Jogar Agora</a>
+                    </div>
+                </div>
+                <div class="game-info">
+                    <h3>157</h3>
+                    <p>Embarque em uma jornada épica cheia de mistérios e desafios</p>
+                    <div class="game-tags">
+                        <span>Ação</span>
+                        <span>Aventura</span>
+                        <span>RPG</span>
+                    </div>
+                </div>
+            </div>
+            <div class="game-card" id="racing-evolution">
+                <div class="game-image">
+                    <img src="/static/images/paradise.png" alt="Racing Evolution">
+                    <div class="game-overlay">
+                        <a href="#" class="play-button"><i class="fas fa-play"></i> Jogar Agora</a>
+                    </div>
+                </div>
+                <div class="game-info">
+                    <h3>Paradise</h3>
+                    <p>Acelere em pistas incríveis e supere seus limites</p>
+                    <div class="game-tags">
+                        <span>Corrida</span>
+                        <span>Esporte</span>
+                        <span>Multiplayer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="news-section">
+        <h2>NOTÍCIAS</h2>
+        <div class="news-carousel">
+            <button class="news-nav prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="news-nav next"><i class="fas fa-chevron-right"></i></button>
+            
+            <div class="news-slider">
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="/static/images/157.png" alt="Take-Two Interactive Software">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">17 de abril de 2025</div>
+                        <h3>Take-Two Interactive Software, Inc. divulgará os resultados do quarto trimestre</h3>
+                        <a href="#" class="news-link">Leia mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="/static/images/paradise.png" alt="Rule Beyond the Ring">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">7 de março de 2025</div>
+                        <h3>"Rule Beyond the Ring" no WWE® 2K25: Bloodline Edition e Deadman Edition</h3>
+                        <a href="#" class="news-link">Leia mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="/static/images/beywery2.png" alt="Rockstar Games">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">3 de março de 2025</div>
+                        <h3>Rockstar Games vai adquirir a Video Games Deluxe</h3>
+                        <a href="#" class="news-link">Leia mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="/static/images/157.png" alt="PGA TOUR 2K25">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">28 de fevereiro de 2025</div>
+                        <h3>PGA TOUR® 2K25 Tees Off Worldwide; Disponível agora</h3>
+                        <a href="#" class="news-link">Leia mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="/static/images/157.png" alt="PGA TOUR 2K25">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">28 de fevereiro de 2025</div>
+                        <h3>PGA TOUR® 2K25 Tees Off Worldwide; Disponível agora</h3>
+                        <a href="#" class="news-link">Leia mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="/static/images/157.png" alt="PGA TOUR 2K25">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">28 de fevereiro de 2025</div>
+                        <h3>PGA TOUR® 2K25 Tees Off Worldwide; Disponível agora</h3>
+                        <a href="#" class="news-link">Leia mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="news-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
+            </div>
+        </div>
+    </section>
+
+    <div class="empresas">
+        <a href="https://www.ultragamex.com.br/"><img src="/static/images/ultragamex-azul-top.png" alt="Ultragamex"></a>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>Email: contact@rolltwo.com</p>
+                <p>Telefone: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h4>Siga-nos</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/rolltwobr/"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 RollTwo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/static/js/main.js" defer></script>
+    <script src="/static/js/script.js" defer></script>
+    <script src="/static/js/news.js" defer></script>
+</body>
+</html>

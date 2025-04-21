@@ -205,4 +205,24 @@ document.addEventListener('DOMContentLoaded', () => {
             openProductDetails(productData);
         });
     });
+
+    // Botão de retorno ao topo
+    const backToTopButton = document.getElementById('back-to-top');
+    
+    // Mostrar/esconder o botão baseado no scroll
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopButton.classList.add('visible');
+        } else {
+            backToTopButton.classList.remove('visible');
+        }
+    });
+
+    // Adicionar evento de clique para retornar ao topo
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 }); 

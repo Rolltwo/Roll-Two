@@ -31,40 +31,50 @@ function openProductDetails(product) {
     });
 
     // Configurar opções de tamanho
-    sizeButtons.innerHTML = '';
-    product.sizes.forEach(size => {
-        const button = document.createElement('button');
-        button.textContent = size;
-        button.addEventListener('click', () => {
-            document.querySelectorAll('#size-options button').forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
+    if (product.sizes && product.sizes.length > 0) {
+        document.getElementById('size-options').style.display = '';
+        sizeButtons.innerHTML = '';
+        product.sizes.forEach(size => {
+            const button = document.createElement('button');
+            button.textContent = size;
+            button.addEventListener('click', () => {
+                document.querySelectorAll('#size-options button').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+            });
+            sizeButtons.appendChild(button);
         });
-        sizeButtons.appendChild(button);
-    });
+    } else {
+        document.getElementById('size-options').style.display = 'none';
+    }
 
     // Configurar opções de cor
-    colorButtons.innerHTML = '';
-    product.colors.forEach(color => {
-        const button = document.createElement('button');
-        button.style.backgroundColor = color;
-        button.addEventListener('click', () => {
-            document.querySelectorAll('#color-options button').forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
+    if (product.colors && product.colors.length > 0) {
+        document.getElementById('color-options').style.display = '';
+        colorButtons.innerHTML = '';
+        product.colors.forEach(color => {
+            const button = document.createElement('button');
+            button.style.backgroundColor = color;
+            button.addEventListener('click', () => {
+                document.querySelectorAll('#color-options button').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
 
-            // Atualizar imagem se houver imagens específicas para cada cor
-            if (product.colorImages && product.colorImages[color]) {
-                mainImage.src = product.colorImages[color];
-                // Atualizar thumbnail também
-                thumbnailsContainer.innerHTML = '';
-                const thumbnail = document.createElement('img');
-                thumbnail.src = product.colorImages[color];
-                thumbnail.alt = `${product.name} - ${color}`;
-                thumbnail.classList.add('active');
-                thumbnailsContainer.appendChild(thumbnail);
-            }
+                // Atualizar imagem se houver imagens específicas para cada cor
+                if (product.colorImages && product.colorImages[color]) {
+                    mainImage.src = product.colorImages[color];
+                    // Atualizar thumbnail também
+                    thumbnailsContainer.innerHTML = '';
+                    const thumbnail = document.createElement('img');
+                    thumbnail.src = product.colorImages[color];
+                    thumbnail.alt = `${product.name} - ${color}`;
+                    thumbnail.classList.add('active');
+                    thumbnailsContainer.appendChild(thumbnail);
+                }
+            });
+            colorButtons.appendChild(button);
         });
-        colorButtons.appendChild(button);
-    });
+    } else {
+        document.getElementById('color-options').style.display = 'none';
+    }
 
     // Configurar botão de adicionar ao carrinho
     addToCartBtn.onclick = () => {
@@ -72,7 +82,8 @@ function openProductDetails(product) {
         const selectedColor = document.querySelector('#color-options button.active')?.style.backgroundColor;
         const quantity = parseInt(document.querySelector('.quantity-input').value);
 
-        if (!selectedSize || !selectedColor) {
+        // Só exige seleção se o produto tiver essas opções
+        if ((product.sizes && product.sizes.length > 0 && !selectedSize) || (product.colors && product.colors.length > 0 && !selectedColor)) {
             alert('Por favor, selecione um tamanho e uma cor antes de adicionar ao carrinho.');
             return;
         }
@@ -80,11 +91,11 @@ function openProductDetails(product) {
         const cartItem = {
             name: product.name,
             price: product.price,
-            size: selectedSize,
-            color: selectedColor,
             quantity: quantity,
-            image: mainImage.src // Usa a imagem atual (que pode ter sido alterada pela seleção de cor)
+            image: mainImage.src
         };
+        if (selectedSize) cartItem.size = selectedSize;
+        if (selectedColor) cartItem.color = selectedColor;
 
         // Adicionar ao carrinho
         if (typeof updateCart === 'function') {

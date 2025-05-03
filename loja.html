@@ -40,7 +40,39 @@
             <button class="category-btn" data-category="acessorios">Acessórios</button>
             <button class="category-btn" data-category="eletronicos">Eletrônicos</button>
             <button class="category-btn" data-category="colecionaveis">Colecionáveis</button>
+            <button class="category-btn" data-category="livros">Livros</button>
         </div>
+
+        <header class="hero" style="margin-bottom: 70px; border-radius: 14px;">
+            <button class="hero-nav prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="hero-nav next"><i class="fas fa-chevron-right"></i></button>
+            
+            <div class="hero-slider">
+                <div class="hero-slide active">
+                    <div class="hero-content">
+                        <h1>Paradise</h1>
+                        <p><b>Venha criar a história de seu personagem no Paradise!</b></p>
+                        <a href="#" class="cta-button">Saber Mais</a>
+                    </div>
+                    <div class="hero-image" style="background-image: url('paradise.png');"></div>
+                </div>
+    
+                <div class="hero-slide">
+                    <div class="hero-content">
+                        <h1>Bey Wery Remastered</h1>
+                        <p><b>A premiada franquia de jogos de estratégia retorna com um novo capítulo revolucionário.</b></p>
+                        <a href="#" class="cta-button">Saber Mais</a>
+                    </div>
+                    <div class="hero-image" style="background-image: url('beywery2.png');"></div>
+                </div>
+            </div>
+    
+            <div class="hero-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+            </div>
+        </header>
+
 
         <div class="products-grid">
             <!-- Vestuário -->
@@ -164,6 +196,23 @@
                 </div>
             </div>
 
+                
+
+
+            <!-- Livros -->
+            <div class="product-card" data-category="livros">
+                <div class="product-image">
+                    <img src="livro-aventura.png" alt="Livro de Aventura">
+                    <div class="product-overlay">
+                        <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Livro de Aventura</h3>
+                    <p>Livro de Aventura exclusivo da RollTwo</p>
+                    <span class="price">R$ 199,90</span>
+                </div>
+            </div>
             <!-- Mais produtos... -->
         </div>
 
@@ -267,6 +316,7 @@
 
     <script src="main.js"></script>
     <script src="loja.js"></script>
+    <script src="script.js"></script>
     <script src="produto.js"></script>
 
     <!-- Botão de retorno ao topo -->

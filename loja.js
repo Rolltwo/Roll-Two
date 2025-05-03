@@ -178,29 +178,29 @@ document.addEventListener('DOMContentLoaded', () => {
             let productImages;
 
             // Verifica se é uma camisa e configura as imagens de acordo
-            if (productName.includes('Camiseta')) {
-                if (productName.includes('Modelo 1')) {
-                    productImages = {
-                        '#000000': 'camisaRT-preta.png',  // Imagem da camisa preta modelo 1
-                        '#FFFFFF': 'camisaRT-branca1.png' // Imagem da camisa branca modelo 1
-                    };
-                } else if (productName.includes('Modelo 2')) {
-                    productImages = {
-                        '#000000': 'camisaRT-preta2.png',  // Imagem da camisa preta modelo 2
-                        '#FFFFFF': 'camisaRT-branca2.png' // Imagem da camisa branca modelo 2
-                    };
-                }
-            }
-
-            const productData = {
+            let productData = {
                 name: productName,
                 price: parseFloat(product.querySelector('.price').textContent.replace('R$ ', '').replace(',', '.')),
                 description: product.querySelector('p').textContent,
-                images: [product.querySelector('img').src],
-                sizes: ['P', 'M', 'G', 'GG'],
-                colors: ['#000000', '#FFFFFF'],
-                colorImages: productImages // Adiciona as imagens para cada cor
+                images: [product.querySelector('img').src]
             };
+
+            if (productName.includes('Camiseta')) {
+                if (productName.includes('Modelo 1')) {
+                    productImages = {
+                        '#000000': 'camisaRT-preta.png',
+                        '#FFFFFF': 'camisaRT-branca1.png'
+                    };
+                } else if (productName.includes('Modelo 2')) {
+                    productImages = {
+                        '#000000': 'camisaRT-preta2.png',
+                        '#FFFFFF': 'camisaRT-branca2.png'
+                    };
+                }
+                productData.sizes = ['P', 'M', 'G', 'GG'];
+                productData.colors = ['#000000', '#FFFFFF'];
+                productData.colorImages = productImages;
+            }
 
             openProductDetails(productData);
         });

@@ -143,7 +143,7 @@
                     <div class="news-content">
                         <div class="news-date">17 de abril de 2025</div>
                         <h3>Roll Two, Inc. divulgará os resultados do quarto trimestre</h3>
-                        <a href="#" class="news-link">Leia mais <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="news-link" data-detalhes="Subtitulo">Leia mais <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
 
@@ -154,7 +154,7 @@
                     <div class="news-content">
                         <div class="news-date">7 de março de 2025</div>
                         <h3>Paradise no WWE® 2K25: Bloodline Edition e Deadman Edition</h3>
-                        <a href="#" class="news-link">Leia mais <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="news-link" data-detalhes="Subtitulo">Leia mais <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
 
@@ -165,7 +165,7 @@
                     <div class="news-content">
                         <div class="news-date">3 de março de 2025</div>
                         <h3>Rockstar Games vai adquirir a Video Games Deluxe</h3>
-                        <a href="#" class="news-link">Leia mais <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="news-link" data-detalhes="Subtitulo">Leia mais <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
 
@@ -176,7 +176,7 @@
                     <div class="news-content">
                         <div class="news-date">28 de fevereiro de 2025</div>
                         <h3>PGA TOUR® 2K25 Tees Off Worldwide; Disponível agora</h3>
-                        <a href="#" class="news-link">Leia mais <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="news-link" data-detalhes="Subtitulo">Leia mais <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
 
@@ -187,7 +187,7 @@
                     <div class="news-content">
                         <div class="news-date">28 de fevereiro de 2025</div>
                         <h3>PGA TOUR® 2K25 Tees Off Worldwide; Disponível agora</h3>
-                        <a href="#" class="news-link">Leia mais <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="news-link" data-detalhes="Subtitulo">Leia mais <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
 
@@ -198,7 +198,7 @@
                     <div class="news-content">
                         <div class="news-date">28 de fevereiro de 2025</div>
                         <h3>PGA TOUR® 2K25 Tees Off Worldwide; Disponível agora</h3>
-                        <a href="#" class="news-link">Leia mais <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="news-link" data-detalhes="Subtitulo">Leia mais <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
             </div>
@@ -266,7 +266,7 @@
                 <img src="${img}" alt="" style="width:100%;border-radius:8px;">
                 <h2>${title}</h2>
                 <p><b>${date}</b></p>
-                <p>Mais detalhes da notícia podem ser exibidos aqui...</p>
+                <p>${link.getAttribute('data-detalhes')}</p>
             `;
             document.getElementById('news-modal-details').innerHTML = details;
             document.getElementById('news-modal').style.display = 'flex';

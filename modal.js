@@ -8,12 +8,12 @@ document.querySelectorAll('.news-link').forEach((link) => {
         const title = article.querySelector('h3').innerText;
         const date = article.querySelector('.news-date').innerText;
         const img = article.querySelector('img').src;
-        // Aqui você pode adicionar mais detalhes se quiser
+        const detalhes = link.getAttribute('data-detalhes') || 'Mais detalhes da notícia podem ser exibidos aqui...';
         const details = `
             <img src="${img}" alt="" style="width:100%;border-radius:8px;">
             <h2>${title}</h2>
             <p><b>${date}</b></p>
-            <p>Mais detalhes da notícia podem ser exibidos aqui...</p>
+            <p>${detalhes}</p>
         `;
         document.getElementById('news-modal-details').innerHTML = details;
         document.getElementById('news-modal').style.display = 'flex';

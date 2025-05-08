@@ -20,27 +20,39 @@
             <i class="fas fa-bars"></i>
         </button>
         <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="#about">Sobre</a>
-            <a href="#careers">Carreira</a>
-            <a href="loja.html" class="active">Loja</a>
+            <a href="index.html" data-translate="home">Home</a>
+            <a href="sobre.html" data-translate="about">Sobre</a>
+            <a href="#careers" data-translate="careers">Carreira</a>
+            <a href="loja.html" class="active" data-translate="store">Loja</a>
         </div>
         <button id="theme-toggle" class="theme-toggle">
             <i class="fas fa-sun"></i>
             <i class="fas fa-moon"></i>
         </button>
+        <div class="language-selector">
+            <button id="language-toggle" class="language-toggle">
+                <i class="fas fa-globe"></i>
+            </button>
+            <div class="language-dropdown">
+                <a href="#" data-lang="pt">Português (BR)</a>
+                <a href="#" data-lang="pt-pt">Português (PT)</a>
+                <a href="#" data-lang="en">English</a>
+                <a href="#" data-lang="es">Español</a>
+                <a href="#" data-lang="zh">中文</a>
+            </div>
+        </div>
     </nav>
 
     <main class="store-container">
-        <h1>Loja RollTwo</h1>
+        <h1 data-translate="store">Loja RollTwo</h1>
         
         <div class="store-categories">
-            <button class="category-btn active" data-category="todos">Todos</button>
-            <button class="category-btn" data-category="vestuario">Vestuário</button>
-            <button class="category-btn" data-category="acessorios">Acessórios</button>
-            <button class="category-btn" data-category="eletronicos">Eletrônicos</button>
-            <button class="category-btn" data-category="colecionaveis">Colecionáveis</button>
-            <button class="category-btn" data-category="livros">Livros</button>
+            <button class="category-btn active" data-category="todos" data-translate="all">Todos</button>
+            <button class="category-btn" data-category="vestuario" data-translate="clothing">Vestuário</button>
+            <button class="category-btn" data-category="acessorios" data-translate="accessories">Acessórios</button>
+            <button class="category-btn" data-category="eletronicos" data-translate="electronics">Eletrônicos</button>
+            <button class="category-btn" data-category="colecionaveis" data-translate="collectibles">Colecionáveis</button>
+            <button class="category-btn" data-category="livros" data-translate="books">Livros</button>
         </div>
 
         <header class="hero" style="margin-bottom: 70px; border-radius: 14px;">
@@ -80,16 +92,16 @@
                 <div class="product-image">
                     <img src="camisaRT-preta.png" alt="Camiseta RollTwo">
                     <div class="product-overlay">
-                        <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                        <button class="add-to-cart-btn" data-translate="addToCart">Adicionar ao Carrinho</button>
                     </div>
                 </div>
                 <div class="product-info">
-                    <h3>Camiseta RollTwo Preta
+                    <h3 data-translate="shirtBlack1">Camiseta RollTwo Preta
                         <br>
                         <br>
                         Modelo 1
                     </h3>
-                    <p>Camiseta oficial com logo da RollTwo</p>
+                    <p data-translate="shirtDesc">Camiseta oficial com logo da RollTwo</p>
                     <span class="price">R$ 79,90</span>
                 </div>
             </div>
@@ -99,16 +111,16 @@
                 <div class="product-image">
                     <img src="camisaRT-branca1.png" alt="Camiseta RollTwo">
                     <div class="product-overlay">
-                        <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                        <button class="add-to-cart-btn" data-translate="addToCart">Adicionar ao Carrinho</button>
                     </div>
                 </div>
                 <div class="product-info">
-                    <h3>Camiseta RollTwo Branca 
+                    <h3 data-translate="shirtWhite1">Camiseta RollTwo Branca 
                         <br>
                         <br>
                         Modelo 1
                     </h3>
-                    <p>Camiseta oficial com logo da RollTwo</p>
+                    <p data-translate="shirtDesc">Camiseta oficial com logo da RollTwo</p>
                     <span class="price">R$ 79,90</span>
                 </div>
             </div>
@@ -118,16 +130,16 @@
                 <div class="product-image">
                     <img src="camisaRT-preta2.png" alt="Camiseta RollTwo">
                     <div class="product-overlay">
-                        <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                        <button class="add-to-cart-btn" data-translate="addToCart">Adicionar ao Carrinho</button>
                     </div>
                 </div>
                 <div class="product-info">
-                    <h3>Camiseta RollTwo Preta
+                    <h3 data-translate="shirtBlack2">Camiseta RollTwo Preta
                         <br>
                         <br>
                         Modelo 2
                     </h3>
-                    <p>Camiseta oficial com logo da RollTwo</p>
+                    <p data-translate="shirtDesc">Camiseta oficial com logo da RollTwo</p>
                     <span class="price">R$ 79,90</span>
                 </div>
             </div>
@@ -137,16 +149,16 @@
                 <div class="product-image">
                     <img src="camisaRT-branca2.png" alt="Camiseta RollTwo">
                     <div class="product-overlay">
-                        <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                        <button class="add-to-cart-btn" data-translate="addToCart">Adicionar ao Carrinho</button>
                     </div>
                 </div>
                 <div class="product-info">
-                    <h3>Camiseta RollTwo Branca
+                    <h3 data-translate="shirtWhite2">Camiseta RollTwo Branca
                         <br>
                         <br>
                         Modelo 2
                     </h3>
-                    <p>Camiseta oficial com logo da RollTwo</p>
+                    <p data-translate="shirtDesc">Camiseta oficial com logo da RollTwo</p>
                     <span class="price">R$ 79,90</span>
                 </div>
             </div>
@@ -156,12 +168,12 @@
                 <div class="product-image">
                     <img src="headset-gaming.png" alt="Headset Gamer">
                     <div class="product-overlay">
-                        <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                        <button class="add-to-cart-btn" data-translate="addToCart">Adicionar ao Carrinho</button>
                     </div>
                 </div>
                 <div class="product-info">
-                    <h3>Headset Gamer Pro</h3>
-                    <p>Headset profissional com som surround 7.1</p>
+                    <h3 data-translate="headset">Headset Gamer Pro</h3>
+                    <p data-translate="headsetDesc">Headset profissional com som surround 7.1</p>
                     <span class="price">R$ 399,90</span>
                 </div>
             </div>
@@ -171,12 +183,12 @@
                 <div class="product-image">
                     <img src="mouse-gamer.png" alt="Mouse Gamer">
                     <div class="product-overlay">
-                        <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                        <button class="add-to-cart-btn" data-translate="addToCart">Adicionar ao Carrinho</button>
                     </div>
                 </div>
                 <div class="product-info">
-                    <h3>Mouse Gamer RGB</h3>
-                    <p>Mouse profissional com 12000 DPI</p>
+                    <h3 data-translate="mouse">Mouse Gamer RGB</h3>
+                    <p data-translate="mouseDesc">Mouse profissional com 12000 DPI</p>
                     <span class="price">R$ 249,90</span>
                 </div>
             </div>
@@ -186,12 +198,12 @@
                 <div class="product-image">
                     <img src="action-figure.png" alt="Action Figure">
                     <div class="product-overlay">
-                        <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                        <button class="add-to-cart-btn" data-translate="addToCart">Adicionar ao Carrinho</button>
                     </div>
                 </div>
                 <div class="product-info">
-                    <h3>Action Figure Paradise</h3>
-                    <p>Action Figure exclusiva do jogo Paradise</p>
+                    <h3 data-translate="figure">Action Figure Paradise</h3>
+                    <p data-translate="figureDesc">Action Figure exclusiva do jogo Paradise</p>
                     <span class="price">R$ 199,90</span>
                 </div>
             </div>
@@ -204,12 +216,12 @@
                 <div class="product-image">
                     <img src="livro-aventura.png" alt="Livro de Aventura">
                     <div class="product-overlay">
-                        <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                        <button class="add-to-cart-btn" data-translate="addToCart">Adicionar ao Carrinho</button>
                     </div>
                 </div>
                 <div class="product-info">
-                    <h3>Livro de Aventura</h3>
-                    <p>Livro de Aventura exclusivo da RollTwo</p>
+                    <h3 data-translate="book">Livro de Aventura</h3>
+                    <p data-translate="bookDesc">Livro de Aventura exclusivo da RollTwo</p>
                     <span class="price">R$ 199,90</span>
                 </div>
             </div>
@@ -229,7 +241,7 @@
     <div class="cart-overlay">
         <div class="cart-container">
             <div class="cart-header">
-                <h2>Seu Carrinho</h2>
+                <h2 data-translate="cart">Seu Carrinho</h2>
                 <button class="cart-close">
                     <i class="fas fa-times"></i>
                 </button>
@@ -239,10 +251,10 @@
             </div>
             <div class="cart-footer">
                 <div class="cart-total">
-                    <span>Total:</span>
+                    <span data-translate="total">Total:</span>
                     <span class="cart-total-price">R$ 0,00</span>
                 </div>
-                <button class="cart-checkout">Finalizar Compra</button>
+                <button class="cart-checkout" data-translate="checkout">Finalizar Compra</button>
             </div>
         </div>
     </div>
@@ -267,7 +279,7 @@
                 <div class="product-details-options">
                     <!-- Opções de tamanho -->
                     <div class="product-details-option" id="size-options">
-                        <h3 class="product-details-option-title">Tamanho</h3>
+                        <h3 class="product-details-option-title" data-translate="size">Tamanho</h3>
                         <div class="product-details-option-buttons">
                             <!-- Botões de tamanho serão adicionados dinamicamente -->
                         </div>
@@ -275,7 +287,7 @@
 
                     <!-- Opções de cor -->
                     <div class="product-details-option" id="color-options">
-                        <h3 class="product-details-option-title">Cor</h3>
+                        <h3 class="product-details-option-title" data-translate="color">Cor</h3>
                         <div class="product-details-option-buttons">
                             <!-- Botões de cor serão adicionados dinamicamente -->
                         </div>
@@ -288,7 +300,7 @@
                     <button class="quantity-btn plus">+</button>
                 </div>
 
-                <button class="product-details-add-to-cart">Adicionar ao Carrinho</button>
+                <button class="product-details-add-to-cart" data-translate="addToCart">Adicionar ao Carrinho</button>
             </div>
         </div>
     </div>
@@ -296,12 +308,12 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h4>Contato</h4>
-                <p>Email: contato@rolltwo.com.br</p>
-                <p>Telefone: (555) 123-4567</p>
+                <h4 data-translate="contact">Contato</h4>
+                <p><span data-translate="email">Email</span>: contato@rolltwo.com.br</p>
+                <p><span data-translate="phone">Telefone</span>: (555) 123-4567</p>
             </div>
             <div class="footer-section">
-                <h4>Siga-nos</h4>
+                <h4 data-translate="followUs">Siga-nos</h4>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-facebook"></i></a>
@@ -310,17 +322,18 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 RollTwo. Todos os direitos reservados.</p>
+            <p>&copy; 2025 RollTwo. <span data-translate="allRightsReserved">Todos os direitos reservados.</span></p>
         </div>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
     <script src="loja.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <script src="produto.js"></script>
+    <script src="language.js" defer></script>
 
     <!-- Botão de retorno ao topo -->
-    <button id="back-to-top" title="Voltar ao topo">
+    <button id="back-to-top" title="Voltar ao topo" data-translate="backToTop">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M18 15l-6-6-6 6"/>
         </svg>

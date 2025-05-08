@@ -203,6 +203,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             openProductDetails(productData);
+            if (typeof updateLanguage === 'function') {
+                const lang = localStorage.getItem('preferredLanguage') || 'pt';
+                updateLanguage(lang);
+            }
         });
     });
 

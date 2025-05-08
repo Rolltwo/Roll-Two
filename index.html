@@ -21,22 +21,34 @@
         </button>
         <div class="nav-links">
             <div class="dropdown">
-                <a href="#games" class="dropdown-trigger">Jogos <i class="fas fa-chevron-down"></i></a>
+                <a href="#games" class="dropdown-trigger"><span data-translate="games">Jogos</span> <i class="fas fa-chevron-down"></i></a>
                 <div class="dropdown-content">
                     <a href="#epic-adventure">Ultra GameX</a>
                     <a href="#racing-evolution">NCBank</a>
                     <a href="#coming-soon">Mnex</a>
                 </div>
             </div>
-            <a href="#about">Sobre</a>
-            <a href="#news">Notícias</a>
-            <a href="#careers">Carreira</a>
-            <a href="loja.html">Loja</a>
+            <a href="sobre.html"><span data-translate="about">Sobre</span></a>
+            <a href="#news"><span data-translate="news">Notícias</span></a>
+            <a href="#careers"><span data-translate="careers">Carreira</span></a>
+            <a href="loja.html"><span data-translate="store">Loja</span></a>
         </div>
         <button id="theme-toggle" class="theme-toggle">
             <i class="fas fa-sun"></i>
             <i class="fas fa-moon"></i>
         </button>
+        <div class="language-selector">
+            <button id="language-toggle" class="language-toggle">
+                <i class="fas fa-globe"></i>
+            </button>
+            <div class="language-dropdown">
+                <a href="#" data-lang="pt">Português (BR)</a>
+                <a href="#" data-lang="pt-pt">Português (PT)</a>
+                <a href="#" data-lang="en">English</a>
+                <a href="#" data-lang="es">Español</a>
+                <a href="#" data-lang="zh">中文</a>
+            </div>
+        </div>
     </nav>
 
     <header class="hero">
@@ -46,18 +58,18 @@
         <div class="hero-slider">
             <div class="hero-slide active">
                 <div class="hero-content">
-                    <h1>Paradise</h1>
-                    <p><b>Venha criar a história de seu personagem no Paradise!</b></p>
-                    <a href="#" class="cta-button">Saber Mais</a>
+                    <h1 data-translate="paradiseTitle">Paradise</h1>
+                    <p><b data-translate="paradiseDesc">Venha criar a história de seu personagem no Paradise!</b></p>
+                    <a href="#" class="cta-button" data-translate="knowMore">Saber Mais</a>
                 </div>
                 <div class="hero-image" style="background-image: url('paradise.png');"></div>
             </div>
 
             <div class="hero-slide">
                 <div class="hero-content">
-                    <h1>Bey Wery Remastered</h1>
-                    <p><b>A premiada franquia de jogos de estratégia retorna com um novo capítulo revolucionário.</b></p>
-                    <a href="#" class="cta-button">Saber Mais</a>
+                    <h1 data-translate="beyweryTitle">Bey Wery Remastered</h1>
+                    <p><b data-translate="beyweryDesc">A premiada franquia de jogos de estratégia retorna com um novo capítulo revolucionário.</b></p>
+                    <a href="#" class="cta-button" data-translate="knowMore">Saber Mais</a>
                 </div>
                 <div class="hero-image" style="background-image: url('beywery2.png');"></div>
             </div>
@@ -74,22 +86,22 @@
 
     <!-- Jogos em Destaque -->
     <section id="featured-games" class="games-section">
-        <h2>Jogos em Destaque</h2>
+        <h2 data-translate="featuredGames">Jogos em Destaque</h2>
         <div class="game-grid">
             <div class="game-card" id="epic-adventure">
                 <div class="game-image">
                     <img src="157.png" alt="Epic Adventure">
                     <div class="game-overlay">
-                        <a href="#" class="play-button"><i class="fas fa-play"></i> Jogar Agora</a>
+                        <a href="#" class="play-button"><i class="fas fa-play"></i> <span data-translate="playNow">Jogar Agora</span></a>
                     </div>
                 </div>
                 <div class="game-info">
                     <h3>157</h3>
-                    <p>Embarque em uma jornada épica cheia de mistérios e desafios</p>
+                    <p data-translate="epicAdventure">Embarque em uma jornada épica cheia de mistérios e desafios</p>
                     <div class="game-tags">
-                        <span>Ação</span>
-                        <span>Aventura</span>
-                        <span>RPG</span>
+                        <span data-translate="action">Ação</span>
+                        <span data-translate="adventure">Aventura</span>
+                        <span data-translate="rpg">RPG</span>
                     </div>
                 </div>
             </div>
@@ -102,11 +114,11 @@
                 </div>
                 <div class="game-info">
                     <h3>Paradise</h3>
-                    <p>Acelere em pistas incríveis e supere seus limites</p>
+                    <p data-translate="racingEvolution">Acelere em pistas incríveis e supere seus limites</p>
                     <div class="game-tags">
-                        <span>Corrida</span>
-                        <span>Esporte</span>
-                        <span>Multiplayer</span>
+                        <span data-translate="racing">Corrida</span>
+                        <span data-translate="sport">Esporte</span>
+                        <span data-translate="multiplayer">Multiplayer</span>
                     </div>
                 </div>
             </div>
@@ -121,16 +133,21 @@
                 <img src="NCbrank-preta-removebg-preview.png" alt="NCBank" class="company-logo logo-light" style="width: 160px; height: 160px;">
                 <img src="NCbrank-branca-removebg-preview.png" alt="NCBank" class="company-logo logo-dark" style="width: 160px; height: 160px;">
             </a>
-            
             <a href="#">
                 <img src="branca-semfundo-removebg-preview.png" alt="Mnex" class="company-logo logo-light" style="width: 160px; height: 160px;">
                 <img src="preta-semfundo-removebg-preview.png" alt="Mnex" class="company-logo logo-dark" style="width: 160px; height: 160px;">
+            </a>
+            <a href="#">
+                <img src="snowdreams.png" alt="Snowdreams" class="company-logo" style="width: 160px; height: 160px;">
+            </a>
+            <a href="#">
+                <img src="Epicnorth Studios.png" alt="EpicNorth" class="company-logo" style="width: 160px; height: 160px;">
             </a>
         </div>
     </section>
 
     <section id="news" class="news-section">
-        <h2>NOTÍCIAS</h2>
+        <h2 data-translate="newsTitle">NOTÍCIAS</h2>
         <div class="news-carousel">
             <button class="news-nav prev"><i class="fas fa-chevron-left"></i></button>
             <button class="news-nav next"><i class="fas fa-chevron-right"></i></button>
@@ -141,9 +158,9 @@
                         <img src="157.png" alt="Take-Two Interactive Software">
                     </div>
                     <div class="news-content">
-                        <div class="news-date">17 de abril de 2025</div>
-                        <h3>Roll Two, Inc. divulgará os resultados do quarto trimestre</h3>
-                        <a href="#" class="news-link" data-detalhes="Subtitulo">Leia mais <i class="fas fa-arrow-right"></i></a>
+                        <div class="news-date" data-translate="newsDate4">17 de abril de 2025</div>
+                        <h3 data-translate="newsTitle4">Roll Two, Inc. divulgará os resultados do quarto trimestre</h3>
+                        <a href="#" class="news-link" data-detalhes="Subtitulo"><span data-translate="readMore">Leia mais</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
 
@@ -152,9 +169,9 @@
                         <img src="paradise.png" alt="Paradise">
                     </div>
                     <div class="news-content">
-                        <div class="news-date">7 de março de 2025</div>
-                        <h3>Paradise no WWE® 2K25: Bloodline Edition e Deadman Edition</h3>
-                        <a href="#" class="news-link" data-detalhes="Subtitulo">Leia mais <i class="fas fa-arrow-right"></i></a>
+                        <div class="news-date" data-translate="newsDate5">7 de março de 2025</div>
+                        <h3 data-translate="newsTitle5">Paradise no WWE® 2K25: Bloodline Edition e Deadman Edition</h3>
+                        <a href="#" class="news-link" data-detalhes="Subtitulo"><span data-translate="readMore">Leia mais</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
 
@@ -163,9 +180,9 @@
                         <img src="beywery2.png" alt="Rockstar Games">
                     </div>
                     <div class="news-content">
-                        <div class="news-date">3 de março de 2025</div>
-                        <h3>Rockstar Games vai adquirir a Video Games Deluxe</h3>
-                        <a href="#" class="news-link" data-detalhes="Subtitulo">Leia mais <i class="fas fa-arrow-right"></i></a>
+                        <div class="news-date" data-translate="newsDate6">3 de março de 2025</div>
+                        <h3 data-translate="newsTitle6">Rockstar Games vai adquirir a Video Games Deluxe</h3>
+                        <a href="#" class="news-link" data-detalhes="Subtitulo"><span data-translate="readMore">Leia mais</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
 
@@ -174,9 +191,9 @@
                         <img src="157.png" alt="PGA TOUR 2K25">
                     </div>
                     <div class="news-content">
-                        <div class="news-date">28 de fevereiro de 2025</div>
-                        <h3>PGA TOUR® 2K25 Tees Off Worldwide; Disponível agora</h3>
-                        <a href="#" class="news-link" data-detalhes="Subtitulo">Leia mais <i class="fas fa-arrow-right"></i></a>
+                        <div class="news-date" data-translate="newsDate1">28 de fevereiro de 2025</div>
+                        <h3 data-translate="newsTitle1">PGA TOUR® 2K25 Tees Off Worldwide; Disponível agora</h3>
+                        <a href="#" class="news-link" data-detalhes="Subtitulo"><span data-translate="readMore">Leia mais</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
 
@@ -185,9 +202,9 @@
                         <img src="157.png" alt="PGA TOUR 2K25">
                     </div>
                     <div class="news-content">
-                        <div class="news-date">28 de fevereiro de 2025</div>
-                        <h3>PGA TOUR® 2K25 Tees Off Worldwide; Disponível agora</h3>
-                        <a href="#" class="news-link" data-detalhes="Subtitulo">Leia mais <i class="fas fa-arrow-right"></i></a>
+                        <div class="news-date" data-translate="newsDate2">28 de fevereiro de 2025</div>
+                        <h3 data-translate="newsTitle2">PGA TOUR® 2K25 Tees Off Worldwide; Disponível agora</h3>
+                        <a href="#" class="news-link" data-detalhes="Subtitulo"><span data-translate="readMore">Leia mais</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
 
@@ -196,9 +213,9 @@
                         <img src="157.png" alt="PGA TOUR 2K25">
                     </div>
                     <div class="news-content">
-                        <div class="news-date">28 de fevereiro de 2025</div>
-                        <h3>PGA TOUR® 2K25 Tees Off Worldwide; Disponível agora</h3>
-                        <a href="#" class="news-link" data-detalhes="Subtitulo">Leia mais <i class="fas fa-arrow-right"></i></a>
+                        <div class="news-date" data-translate="newsDate3">28 de fevereiro de 2025</div>
+                        <h3 data-translate="newsTitle3">PGA TOUR® 2K25 Tees Off Worldwide; Disponível agora</h3>
+                        <a href="#" class="news-link" data-detalhes="Subtitulo"><span data-translate="readMore">Leia mais</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
             </div>
@@ -214,12 +231,12 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h4>Contato</h4>
-                <p>Email: contato@rolltwo.com.br</p>
-                <p>Telefone: (555) 123-4567</p>
+                <h4 data-translate="contact">Contato</h4>
+                <p><span data-translate="email">Email</span>: contato@rolltwo.com.br</p>
+                <p><span data-translate="phone">Telefone</span>: (555) 123-4567</p>
             </div>
             <div class="footer-section">
-                <h4>Siga-nos</h4>
+                <h4 data-translate="followUs">Siga-nos</h4>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-facebook"></i></a>
@@ -228,7 +245,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 RollTwo. Todos os direitos reservados.</p>
+            <p>&copy; 2025 RollTwo. <span data-translate="allRightsReserved">Todos os direitos reservados.</span></p>
         </div>
     </footer>
 
@@ -236,6 +253,7 @@
     <script src="script.js" defer></script>
     <script src="news.js" defer></script>
     <script src="modal.js" defer></script>
+    <script src="language.js" defer></script>
 
     <!-- Botão de retorno ao topo -->
     <button id="back-to-top" title="Voltar ao topo">

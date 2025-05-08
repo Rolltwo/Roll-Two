@@ -14,6 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
         slides[index].classList.add('active');
         dots[index].classList.add('active');
         currentSlide = index;
+        if (typeof updateLanguage === 'function') {
+            const lang = localStorage.getItem('preferredLanguage') || 'pt';
+            updateLanguage(lang);
+        }
     }
 
     // Função para ir para o próximo slide

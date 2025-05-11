@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="loja.css">
     <link rel="stylesheet" href="produto.css">
+    <link rel="stylesheet" href="mobile-menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -331,6 +332,7 @@
     <script src="script.js" defer></script>
     <script src="produto.js"></script>
     <script src="language.js" defer></script>
+    <script src="mobile-menu.js" defer></script>
 
     <!-- Botão de retorno ao topo -->
     <button id="back-to-top" title="Voltar ao topo" data-translate="backToTop">
@@ -338,5 +340,36 @@
             <path d="M18 15l-6-6-6 6"/>
         </svg>
     </button>
+
+    <script>
+        document.querySelectorAll('.news-link').forEach((link, idx) => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Pegue o artigo correspondente
+                const article = link.closest('.news-card');
+                const title = article.querySelector('h3').innerText;
+                const date = article.querySelector('.news-date').innerText;
+                const img = article.querySelector('img').src;
+                // Aqui você pode adicionar mais detalhes se quiser
+                const details = `
+                    <img src="${img}" alt="" style="width:100%;border-radius:8px;">
+                    <h2>${title}</h2>
+                    <p><b>${date}</b></p>
+                    <p>${link.getAttribute('data-detalhes')}</p>
+                `;
+                document.getElementById('news-modal-details').innerHTML = details;
+                document.getElementById('news-modal').style.display = 'flex';
+            });
+        });
+    
+        // Fechar o modal
+        document.querySelector('.news-modal-close').onclick = function() {
+            document.getElementById('news-modal').style.display = 'none';
+        };
+        // Fechar ao clicar fora do conteúdo
+        document.getElementById('news-modal').onclick = function(e) {
+            if (e.target === this) this.style.display = 'none';
+        };
+        </script>
 </body>
 </html> 

@@ -41,8 +41,9 @@ body {
     top: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     padding: 0.5rem 5%;
     background-color: var(--nav-bg);
     backdrop-filter: blur(10px);
@@ -287,13 +288,10 @@ body {
     color: var(--accent-color);
 }
 
-.theme-toggle {
-    background: none;
-    border: none;
-    color: var(--text-primary);
-    cursor: pointer;
-    font-size: 1.2rem;
-    padding: 0.5rem;
+.theme-toggle, .language-selector {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 0.5rem;
 }
 
 .hero {
@@ -695,17 +693,20 @@ body {
 
     .theme-toggle {
         order: 3;
+        margin-left: 0.5rem;
+    }
+
+    .language-selector {
+        display: none;
     }
 
     .nav-links {
-        display: flex !important;
+        display: none;
         order: 4;
-        position: relative;
-        top: 0;
+        position: absolute;
+        top: 100%;
         left: 0;
         width: 100%;
-        height: 0;
-        overflow: hidden;
         background-color: var(--bg-primary);
         backdrop-filter: blur(10px);
         flex-direction: column;
@@ -714,10 +715,11 @@ body {
         transition: all 0.3s ease;
         opacity: 0;
         visibility: hidden;
+        z-index: 1000;
     }
 
     .nav-links.active {
-        height: auto;
+        display: flex;
         padding: 2rem 0;
         opacity: 1;
         visibility: visible;
@@ -744,7 +746,7 @@ body {
     .dropdown-content {
         position: static;
         width: 100%;
-        background-color: transparent;
+        background-color: var(--bg-secondary);
         box-shadow: none;
         border: none;
         opacity: 1;
@@ -752,10 +754,6 @@ body {
         transform: none;
         padding: 1rem 0;
         display: none;
-    }
-
-    .dropdown:hover .dropdown-content {
-        display: block;
     }
 
     .dropdown-content a {
@@ -766,7 +764,7 @@ body {
     }
 
     .dropdown-content a:hover {
-        background-color: transparent;
+        background-color: var(--bg-primary);
         border-bottom: 2px solid var(--accent-color);
         padding-left: 1rem;
     }
@@ -795,6 +793,42 @@ body {
 
     .social-links {
         justify-content: center;
+    }
+
+    .language-dropdown {
+        position: fixed !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        top: unset !important;
+        width: 100vw !important;
+        background: var(--bg-primary) !important;
+        border-radius: 12px 12px 0 0 !important;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.2) !important;
+        padding: 1rem 0 !important;
+        z-index: 9999 !important;
+        transform: translateY(100%) !important;
+        transition: transform 0.3s !important, opacity 0.3s !important, visibility 0.3s !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        display: block !important;
+    }
+    .language-dropdown.show {
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+    }
+    .language-dropdown a {
+        display: block !important;
+        text-align: center !important;
+        font-size: 1.2rem !important;
+        padding: 1rem 0 !important;
+        border-bottom: 1px solid var(--text-secondary) !important;
+    }
+    .language-dropdown a:last-child {
+        border-bottom: none !important;
     }
 }
 
@@ -927,4 +961,27 @@ body {
     .language-dropdown a:last-child {
         border-bottom: none;
     }
+}
+
+.theme-toggle i {
+    display: none;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+:root[data-theme="light"] .theme-toggle .fa-moon {
+    display: inline-block;
+}
+:root[data-theme="dark"] .theme-toggle .fa-sun {
+    display: inline-block;
+}
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

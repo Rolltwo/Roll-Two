@@ -7,7 +7,7 @@ const translations = {
         news: "Notícias",
         careers: "Carreira",
         store: "Loja",
-        
+        coroa: "Coroa",
         // Hero Section
         knowMore: "Saber Mais",
         paradiseTitle: "Paradise",
@@ -104,7 +104,7 @@ const translations = {
         news: "News",
         careers: "Careers",
         store: "Store",
-        
+        coroa: "Crown",
         // Hero Section
         knowMore: "Learn More",
         paradiseTitle: "Paradise",
@@ -201,7 +201,7 @@ const translations = {
         news: "Noticias",
         careers: "Carreras",
         store: "Tienda",
-        
+        coroa: "Corona",
         // Sección Hero
         knowMore: "Saber Más",
         paradiseTitle: "Paradise",
@@ -297,6 +297,7 @@ const translations = {
         news: "新闻",
         careers: "招聘",
         store: "商店",
+        coroa: "皇冠",
         knowMore: "了解更多",
         paradiseTitle: "天堂",
         paradiseDesc: "来创造你在天堂的角色故事吧！",
@@ -493,24 +494,34 @@ document.addEventListener('DOMContentLoaded', () => {
     updateLanguage(savedLanguage);
     
     // Toggle do dropdown
-    languageToggle.addEventListener('click', () => {
+    languageToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
         languageDropdown.classList.toggle('show');
     });
     
-    // Fechar dropdown ao clicar fora
+    // Fechar dropdown ao clicar fora (reforçado)
     document.addEventListener('click', (e) => {
-        if (!languageToggle.contains(e.target) && !languageDropdown.contains(e.target)) {
-            languageDropdown.classList.remove('show');
-        }
+        setTimeout(() => {
+            if (!languageToggle.contains(e.target) && !languageDropdown.contains(e.target)) {
+                languageDropdown.classList.remove('show');
+            }
+        }, 50);
     });
-    
-    // Mudar idioma
+
+    // Fechar dropdown ao clicar em um link (reforçado)
     languageLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const lang = link.getAttribute('data-lang');
             updateLanguage(lang);
-            languageDropdown.classList.remove('show');
+            setTimeout(() => {
+                languageDropdown.classList.remove('show');
+            }, 50);
         });
+    });
+
+    // Prevenir que o clique no dropdown feche o menu
+    languageDropdown.addEventListener('click', (e) => {
+        e.stopPropagation();
     });
 }); 

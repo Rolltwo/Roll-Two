@@ -7,7 +7,7 @@ const translations = {
         news: "Notícias",
         careers: "Carreira",
         store: "Loja",
-        coroa: "Coroa",
+        coroa: "Coleção",
         // Hero Section
         knowMore: "Saber Mais",
         paradiseTitle: "Paradise",
@@ -104,7 +104,7 @@ const translations = {
         news: "News",
         careers: "Careers",
         store: "Store",
-        coroa: "Crown",
+        coroa: "Collection",
         // Hero Section
         knowMore: "Learn More",
         paradiseTitle: "Paradise",
@@ -201,7 +201,7 @@ const translations = {
         news: "Noticias",
         careers: "Carreras",
         store: "Tienda",
-        coroa: "Corona",
+        coroa: "Colección",
         // Sección Hero
         knowMore: "Saber Más",
         paradiseTitle: "Paradise",
@@ -297,7 +297,7 @@ const translations = {
         news: "新闻",
         careers: "招聘",
         store: "商店",
-        coroa: "皇冠",
+        coroa: "收藏",
         knowMore: "了解更多",
         paradiseTitle: "天堂",
         paradiseDesc: "来创造你在天堂的角色故事吧！",

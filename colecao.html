@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <title data-translate="colecaoTitle">Coleção | RollTwo.inc</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loja.css">
+    <link rel="stylesheet" href="produto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero {
+            height: 600px !important;
+            margin-top: 120px !important;
+        }
+        .colecao-produtos {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 32px;
+        }
+        .add-to-cart-btn {
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px;
+            background-color: var(--accent-color);
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+        .add-to-cart-btn:hover {
+            background-color: #4a90e2;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="RollTwo-branca.png" alt="RollTwo Logo" class="logo-dark">
+            <img src="RollTwo-preta.png" alt="RollTwo Logo" class="logo-light">
+        </div>
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links">
+            <a href="index.html" data-translate="home">Home</a>
+            <a href="sobre.html" data-translate="about">Sobre</a>
+            <a href="#careers" data-translate="careers">Carreira</a>
+            <a href="loja.html" data-translate="store">Loja</a>
+            <a href="colecao.html" class="active" data-translate="coroa">Coleção</a>
+        </div>
+        <button id="theme-toggle" class="theme-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </button>
+        <div class="language-selector">
+            <button id="language-toggle" class="language-toggle">
+                <i class="fas fa-globe"></i>
+            </button>
+            <div class="language-dropdown">
+                <a href="#" data-lang="pt">Português (BR)</a>
+                <a href="#" data-lang="pt-pt">Português (PT)</a>
+                <a href="#" data-lang="en">English</a>
+                <a href="#" data-lang="es">Español</a>
+                <a href="#" data-lang="zh">中文</a>
+            </div>
+        </div>
+    </nav>
+    <header class="hero" style="margin-bottom: 70px; border-radius: 14px;">
+        <button class="hero-nav prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="hero-nav next"><i class="fas fa-chevron-right"></i></button>
+        
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <div class="hero-content">
+                    <img src="atlanta-logo.png" alt="Atlanta" class="hero-logo" style="width: 300px; height: 100px;">
+                    <p><b>A premiada franquia de jogos de estratégia retorna com um novo capítulo revolucionário.</b></p>
+                    <a href="#colecao-produtos" class="cta-button" data-translate="knowMore">Saber Mais</a>
+                </div>
+                <div class="hero-image" style="background-image: url('atlanta.png');"></div>
+            </div>
+
+            <div class="hero-slide">
+                <div class="hero-content">
+                    <h1 data-translate="colecaoTitle">Coleção</h1>
+                    <p data-translate="colecaoDesc">Confira nossos itens exclusivos de coleção! Adquira produtos oficiais e faça parte do universo RollTwo.</p>
+                    <a href="#colecao-produtos" class="cta-button" data-translate="knowMore">Saber Mais</a>
+                </div>
+                <div class="hero-image" style="background-image: url('paradise.png');"></div>
+            </div>
+
+            <div class="hero-slide">
+                <div class="hero-content">
+                    <h1>Action Figure Paradise</h1>
+                    <p>A peça mais desejada pelos fãs do universo Paradise. Garanta já a sua!</p>
+                    <a href="#colecao-produtos" class="cta-button" data-translate="knowMore">Saber Mais</a>
+                </div>
+                <div class="hero-image" style="background-image: url('figure-paradise.png');"></div>
+            </div>
+
+            <div class="hero-slide">
+                <div class="hero-content">
+                    <h1>Camiseta RollTwo Preta</h1>
+                    <p>Estilo e exclusividade para quem é fã de verdade. Disponível em todos os tamanhos.</p>
+                    <a href="#colecao-produtos" class="cta-button" data-translate="knowMore">Saber Mais</a>
+                </div>
+                <div class="hero-image" style="background-image: url('camiseta-preta.png');"></div>
+            </div>
+        </div>
+
+        <div class="hero-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
+        </div>
+    </header>
+    <section class="colecao-produtos" id="colecao-produtos">
+        <h2 data-translate="colecaoProdutos">Itens de Coleção à Venda</h2>
+        <div id="colecao-grid" class="products-grid"></div>
+    </section>
+    <!-- Carrinho flutuante -->
+    <div class="cart-floating">
+        <button class="cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+        </button>
+    </div>
+    <!-- Overlay do Carrinho -->
+    <div class="cart-overlay">
+        <div class="cart-container">
+            <div class="cart-header">
+                <h2 data-translate="cart">Seu Carrinho</h2>
+                <button class="cart-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cart-items"></div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span data-translate="total">Total:</span>
+                    <span class="cart-total-price">R$ 0,00</span>
+                </div>
+                <button class="cart-checkout" data-translate="checkout">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4 data-translate="contact">Contato</h4>
+                <p><span data-translate="email">Email</span>: contato@rolltwo.com.br</p>
+                <p><span data-translate="phone">Telefone</span>: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h4 data-translate="followUs">Siga-nos</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/rolltwoinc/"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 RollTwo. <span data-translate="allRightsReserved">Todos os direitos reservados.</span></p>
+        </div>
+    </footer>
+    <script src="main.js" defer></script>
+    <script src="loja.js"></script>
+    <script src="language.js" defer></script>
+    <script>
+    // Exemplo de produtos de coleção (pode ser substituído por dados reais)
+    const colecaoProdutos = [
+        {
+            id: 1,
+            nome: "Action Figure Paradise",
+            preco: 149.90,
+            imagem: "figure-paradise.png",
+            descricao: "Action Figure exclusiva do jogo Paradise"
+        },
+        {
+            id: 2,
+            nome: "Camiseta RollTwo Preta",
+            preco: 79.90,
+            imagem: "camiseta-preta.png",
+            descricao: "Camiseta oficial com logo da RollTwo"
+        },
+        {
+            id: 3,
+            nome: "Livro de Aventura",
+            preco: 59.90,
+            imagem: "livro-aventura.png",
+            descricao: "Livro de Aventura exclusivo da RollTwo"
+        }
+    ];
+
+    // Renderizar produtos na grid
+    const grid = document.getElementById('colecao-grid');
+    colecaoProdutos.forEach(prod => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.innerHTML = `
+            <div class="product-image">
+                <img src="${prod.imagem}" alt="${prod.nome}">
+                <div class="product-overlay">
+                    <button class="add-to-cart-btn" data-translate="addToCart">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+            <div class="product-info">
+                <h3>${prod.nome}</h3>
+                <p>${prod.descricao}</p>
+                <span class="price">R$ ${prod.preco.toFixed(2)}</span>
+            </div>
+        `;
+        grid.appendChild(card);
+    });
+
+    // Slider automático e manual
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.hero-nav.prev');
+    const nextBtn = document.querySelector('.hero-nav.next');
+    let currentSlide = 0;
+    let slideInterval;
+
+    function showSlide(idx) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === idx);
+        });
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === idx);
+        });
+        currentSlide = idx;
+    }
+
+    function nextSlide() {
+        showSlide((currentSlide + 1) % slides.length);
+    }
+
+    function prevSlide() {
+        showSlide((currentSlide - 1 + slides.length) % slides.length);
+    }
+
+    function startAutoSlide() {
+        slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    function stopAutoSlide() {
+        clearInterval(slideInterval);
+    }
+
+    // Event listeners
+    prevBtn.addEventListener('click', () => {
+        stopAutoSlide();
+        prevSlide();
+        startAutoSlide();
+    });
+
+    nextBtn.addEventListener('click', () => {
+        stopAutoSlide();
+        nextSlide();
+        startAutoSlide();
+    });
+
+    dots.forEach((dot, idx) => {
+        dot.addEventListener('click', () => {
+            stopAutoSlide();
+            showSlide(idx);
+            startAutoSlide();
+        });
+    });
+
+    // Iniciar o slider
+    showSlide(0);
+    startAutoSlide();
+    </script>
+</body>
+</html>

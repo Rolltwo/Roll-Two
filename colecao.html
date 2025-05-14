@@ -35,6 +35,39 @@
         .add-to-cart-btn:hover {
             background-color: #4a90e2;
         }
+
+        /* Estilos do botão voltar ao topo */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: #4a90e2;
+            transform: translateY(-3px);
+        }
     </style>
 </head>
 <body>
@@ -166,12 +199,15 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 RollTwo. <span data-translate="allRightsReserved">Todos os direitos reservados.</span></p>
+            <a href="copyright.html" style="color:inherit;text-decoration:none;">&copy; 2025 RollTwo. Todos os direitos reservados.</a>
         </div>
     </footer>
     <script src="main.js" defer></script>
     <script src="loja.js"></script>
     <script src="language.js" defer></script>
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
     <script>
     // Exemplo de produtos de coleção (pode ser substituído por dados reais)
     const colecaoProdutos = [
@@ -277,6 +313,24 @@
     // Iniciar o slider
     showSlide(0);
     startAutoSlide();
+
+    // Botão voltar ao topo
+    const backToTopButton = document.getElementById('back-to-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+    });
+
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
     </script>
 </body>
 </html>
